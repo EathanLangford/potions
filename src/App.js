@@ -66,48 +66,6 @@ function App() {
                     <div className={"background"}/>
                 </div>
             </div>
-
-            {/*<div className="container">*/
-            }
-            {/*    <div className="light">*/
-            }
-
-            {/*    </div>*/
-            }
-            {/*    <div className="gameboy_frame">*/
-            }
-            {/*        <div className="glow">*/
-            }
-
-            {/*        </div>*/
-            }
-            {/*        <div className="content">*/
-            }
-            {/*            <div className="screenback">*/
-            }
-
-            {/*            </div>*/
-            }
-
-
-            {/*        </div>*/
-            }
-            {/*    </div>*/
-            }
-            {/*</div>*/
-            }
-
-
-            {/*<div className="page-container">*/
-            }
-
-            {/*    <div className={"cards-container"}>*/
-            }
-            {/*    </div>*/
-            }
-
-            {/*</div>*/
-            }
         </>
     )
 }

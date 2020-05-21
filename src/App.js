@@ -1,31 +1,9 @@
 import React from 'react';
 import './App.css';
-import Card from "./Components/Card";
+// import Card from "./Components/Card";
+import Deck from "./Components/Deck";
 
 function App() {
-    let list = ["Skin-Rip",
-        "Chrome",
-        "Cross",
-        "Biomech",
-        "Yin-Yang",
-        "Dagger",
-        "Panther",
-        "Skull",
-        "Eagle",
-        "Fire",
-        "Flower",
-        "Think-Weird",
-        "Barbed-Wire",
-        "Snake",
-        "Devil",
-        "Eye",
-        "Heart",
-        "Tribal",
-        "Butterfly",
-        "Girl-Head",
-        "Water",
-        "Tiger",
-        "Spider-Web"];
 
 
     return (<>
@@ -40,17 +18,7 @@ function App() {
                             <div className={"text"}>
                                 <h2>Tap a card to flip it, flip it again to reroll.</h2>
                             </div>
-                            <div className={"cards"}>
-                                {/*<Card id={"trad"}  list={["Dagger", "Panther", "Skull", "Eagle", "Fire", "Flower",]}/>*/}
-                                <Card id={"trad"}  list={list}/>
-                                <Card id={"trad"}  list={list}/>
-                                <Card id={"trad"}  list={list}/>
-                                {/*<Card id={"love"}  list={["Get Weird", "Barbed-Wire", "Snake", "Devil", "Eye", "Heart"]}/>*/}
-                                {/*<Card id={"90s"}  list={["Tribal", "Butterfly", "Girl Head", "Water", "Tiger", "Spider Web"]}/>*/}
-                                {/*<Card id={"80s"}  list={["Chrome", "Blood", "Cross", "BioMech", "Skin Rip", "Yin-Yang"]}/>*/}
-                                {/*<Card id={"nerd"}  list={["Stardust", "Dragon", "Wing", "Wolf", "Wizard", "Tribal"]}/>*/}
-                                {/*<Card id={"games"}  list={["Stardust", "Dragon", "Wing", "Wolf", "Wizard", "Tribal"]}/>*/}
-                            </div>
+                            <Deck/>
                         </div>
                     </div>
                     <div className="piece scanlines noclick">

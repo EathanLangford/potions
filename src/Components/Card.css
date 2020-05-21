@@ -1,23 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=VT323);
 
 .card {
-    /*height: 40%;*/
-    /*width: 25%;  */
     height: 150px;
     width: 100px;
     margin: 0;
     padding: 0;
     top: 20px;
-
-    /*min-width: 100px;*/
-    /*max-width: 120px;*/
-    /*min-height: 150px;*/
-    /*max-height: 190px;*/
     margin-left: 5px;
     margin-right: 5px;
     position: relative;
     transform-style: preserve-3d;
     box-sizing: border-box;
+    animation: floating 5s infinite;
 }
 .card.flipped .front {
     transform: rotateY(180deg);
@@ -30,10 +24,6 @@
     box-sizing: border-box;
     height: 150px;
     width: 100px;
-    /*min-width: 100px;*/
-    /*max-width: 120px;*/
-    /*min-height: 150px;*/
-    /*max-height: 190px;*/
     display: block;
     background: #f8f6ea;
     box-shadow: 10px 10px 5px darkslategray;
@@ -47,7 +37,6 @@
 .card .front {
     z-index: 2;
     transform: rotateY(0deg);
-    /* front tile styles go here! */
 }
 .card .back {
     background-image: url("../Resources/images/pixel-card.png");
@@ -55,7 +44,6 @@
     transform: rotateY(-180deg);
     padding: 20px;
     font-size: 20px;
-    /* back tile styles go here! */
 }
 
 .item {
@@ -68,7 +56,6 @@ text-align: center;
 }
 
 .item p {
-    /*font-size: 24px;*/
     margin: 0;
     font-size: 100%;
 }
@@ -81,6 +68,10 @@ text-align: center;
     border-top:    3px solid  black;
     border-bottom: 3px solid black;
     background-repeat: no-repeat;
+}
+@keyframes floating {
+    50% {transform: translateY(5%)}
+    100% {transform: translateY(0%)}
 }
 
 .dagger {
@@ -219,4 +210,10 @@ text-align: center;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url("../Resources/images/symbols/yin-yang.PNG");
+}
+.snake {
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../Resources/images/symbols/snake.JPG");
 }

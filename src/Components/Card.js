@@ -3,19 +3,18 @@ import './Card.css';
 
 
 class Card extends React.Component {
-    list;
 
     constructor(props) {
         super(props);
+
         this.state = {
+            position: this.props.position,
             flipped: true,
-            list: this.props.list,
-            front: this.props.list[0],
-            number: 0,
-            roman: "I",
+            front: this.props.front,
+            number: this.props.number,
+            roman: "I"
         };
         this.flip = this.flip.bind(this);
-
     }
 
     romanize = (num) => {
@@ -44,35 +43,29 @@ class Card extends React.Component {
         return roman;
     };
 
-    trimTitle = (title) => {
-        return title.toString().replace("-", " ")
-    };
-
-    randomNumber = () => {
-        let min = 0;
-        let max = Math.floor(this.props.list.length - 1);
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    };
-
     componentDidMount() {
-        console.log(this.state.list);
         this.setState({
-            number: this.randomNumber(this.state.list.length),
             roman: this.romanize(this.state.number),
-            front: this.state.list[this.state.number]
         })
     }
 
     flip = () => {
-
+        debugger
+        console.log("got to flip");
+        let cardDetails = this.props.getCardDetails(this.props.position);
+        console.log(cardDetails);
         this.setState({
-            number: this.randomNumber(this.state.list.length),
             flipped: !this.state.flipped,
-            front:
-                this.state.flipped ? this.state.list[this.state.number] : this.state.front,
-            roman: this.state.flipped ? this.romanize(this.state.number) : this.state.roman
+            front: this.state.flipped ? cardDetails[1] : this.state.front,
+            number: cardDetails[0],
+            roman: this.state.flipped ? this.romanize(cardDetails[0]) : this.state.roman
 
         });
+
+    };
+
+    trimTitle = (title) => {
+        return title.toString().replace("-", " ")
     };
 
     render() {
@@ -86,7 +79,7 @@ class Card extends React.Component {
                 <div className="front">
                     <div className={"item"}><p>{this.state.roman}</p></div>
                     <div className={"icon " + this.state.front.toLowerCase()}/>
-                    <div className={"item"}><p>{this.trimTitle(this.state.front)}</p></div>
+                    <div className={"item"}><p>{this.trimTitle(this.state.front).toUpperCase()}</p></div>
                 </div>
             </div>
 

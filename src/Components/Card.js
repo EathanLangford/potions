@@ -50,10 +50,7 @@ class Card extends React.Component {
     }
 
     flip = () => {
-        debugger
-        console.log("got to flip");
         let cardDetails = this.props.getCardDetails(this.props.position);
-        console.log(cardDetails);
         this.setState({
             flipped: !this.state.flipped,
             front: this.state.flipped ? cardDetails[1] : this.state.front,

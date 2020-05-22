@@ -37,35 +37,24 @@ class Deck extends React.Component {
     }
 
     getRandomInt = (max) => {
-        console.log("called get randomInt");
 
         return Math.floor(Math.random() * Math.floor(max));
     };
 
     getUniqueRandomNumber = () => {
-        debugger;
-        console.log("called get UniqueRandomNumber");
         let randomNumber = this.getRandomInt(this.state.list.length-1);
-        console.log("random number is = "+randomNumber);
         let a = this.state.threeNumbers[0];
         let b = this.state.threeNumbers[1];
         let c = this.state.threeNumbers[2];
         while (randomNumber === a || randomNumber === b || randomNumber === c) {
-            console.log("inside loop");
             randomNumber = this.getRandomInt(this.state.list.length-1);
-            console.log("new random number is = "+randomNumber);
         }
-        console.log("returning randomNumber = "+randomNumber);
         return randomNumber
     };
 
     getCardDetails = (position) => {
-        debugger;
-        console.log("called getCardDetails");
         let newNumber = this.getUniqueRandomNumber();
-        console.log("three numbers before setting ["+this.state.threeNumbers+"]");
         this.setUniqueRandomNumber(position, newNumber);
-        console.log("three numbers after setting ["+this.state.threeNumbers+"]");
         let newCardFront = this.state.list[newNumber];
         return [newNumber, newCardFront]
     };
@@ -77,7 +66,6 @@ class Deck extends React.Component {
     };
 
     render() {
-        debugger;
         let card1 = 0;
         let card2 = 1;
         let card3 = 2;

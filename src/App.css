@@ -862,7 +862,9 @@ a:hover {
     -webkit-background-size: cover;
     background-size: 250%;
     animation: clouds 10s infinite;
-    opacity: 10%;
+    opacity: 0.1;  /* Opacity for Modern Browsers */
+    filter: alpha(opacity=50);  /* Opacity for IE8 and lower */
+    zoom: 1;  /* Fix for IE7 */
     z-index: 0;
 
 
@@ -880,7 +882,9 @@ a:hover {
     -webkit-background-size: cover;
     background-size: 350%;
     animation: clouds 11s infinite;
-    opacity: 10%;
+        opacity: 0.1;  /* Opacity for Modern Browsers */
+    filter: alpha(opacity=50);  /* Opacity for IE8 and lower */
+    zoom: 1;  /* Fix for IE7 */
     z-index: 0;
 
 
@@ -899,7 +903,9 @@ a:hover {
     -webkit-background-size: cover;
     background-size: 350%;
     animation: clouds2 13s infinite;
-    opacity: 10%;
+        opacity: 0.1;  /* Opacity for Modern Browsers */
+    filter: alpha(opacity=50);  /* Opacity for IE8 and lower */
+    zoom: 1;  /* Fix for IE7 */
     z-index: 0;
 
 
@@ -916,7 +922,9 @@ a:hover {
     -webkit-background-size: cover;
     background-size: 350%;
     animation: clouds 24s infinite;
-    opacity: 10%;
+        opacity: 0.1;  /* Opacity for Modern Browsers */
+    filter: alpha(opacity=50);  /* Opacity for IE8 and lower */
+    zoom: 1;  /* Fix for IE7 */
     z-index: 0;
 
 
@@ -934,7 +942,9 @@ a:hover {
     -webkit-background-size: cover;
     background-size: 300%;
     animation: clouds2 21s infinite;
-    opacity: 5%;
+    opacity: 0.05;  /* Opacity for Modern Browsers */
+    filter: alpha(opacity=50);  /* Opacity for IE8 and lower */
+    zoom: 1;  /* Fix for IE7 */
     z-index: 0;
 }
 
